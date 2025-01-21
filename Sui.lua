@@ -100,3 +100,31 @@ local ToggleFarm = AddToggle(Main, {
         end
   end
 })
+
+
+local function trackFootball()
+    local character = player.Character or player.CharacterAdded:Wait()
+
+    while isAutoBallEnabled do
+        local football = workspace:FindFirstChild("Football")
+        if football then
+            if not character:FindFirstChild("Football") then
+                character:SetPrimaryPartCFrame(football.CFrame) -- Teleport to the football
+            end
+        else
+            print("Football is not in workspace anymore")
+        end
+        wait(0.1) -- Wait for 0.1 seconds before checking again
+    end
+end
+
+local ToggleBall = AddToggle(Main, {
+  Name = "Auto Get ball",
+  Default = false,
+  Callback = function(Value)
+    isAutoGoalEnabled = value
+        if isAutoGoalEnabled then
+            AutoGoal()
+        end
+  end
+})
