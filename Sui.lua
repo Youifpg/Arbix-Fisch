@@ -43,3 +43,14 @@ local Image = AddImageLabel(Main, {
   Image = "rbxassetid://71515603931996"
 })
 local Label = AddTextLabel(Main, "Simple And Easy use , Good hub | By TOUKA and ARBIX team and TBD owner")
+
+-- Auto
+local Main = MakeTab({Name = "MAIN"})
+
+local ToggleFarm = AddToggle(Main, {
+  Name = "Auto Goal ( need ball )",
+  Default = false,
+  Callback = function(Value)
+    
+  end
+})
