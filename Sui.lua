@@ -122,9 +122,9 @@ local ToggleBall = AddToggle(Main, {
   Name = "Auto Get ball",
   Default = false,
   Callback = function(Value)
-    isAutoGoalEnabled = value
-        if isAutoGoalEnabled then
-            AutoGoal()
+    isAutoBallEnabled = value
+        if isAutoBallEnabled then
+            trackFootball()
         end
   end
 })
