@@ -51,6 +51,42 @@ local Label = AddTextLabel(Main, "Simple And Easy use , Good hub | By TOUKA and 
 
 -- Auto
 local Main = MakeTab({Name = "MAIN"})
+local isAutoGoalEnabled = false
+local isAutoBallEnabled = false
+
+local function AutoGoal()
+    local character = player.Character or player.CharacterAdded:Wait()
+    local football = workspace:FindFirstChild("Football")
+
+    if football then
+        while isAutoGoalEnabled do
+            if character:FindFirstChild("Football") then
+               
+                local goalPosition
+                if player.Team.Name == "Away" then
+                    goalPosition = workspace.Goals.Away.CFrame
+                elseif player.Team.Name == "Home" then
+                    goalPosition = workspace.Goals.Home.CFrame
+                end
+
+                if goalPosition then
+                    character:SetPrimaryPartCFrame(goalPosition)
+                    wait(0.1)
+                    
+                    local args = {
+                        [1] = 30,
+                        [4] = Vector3.new(0, 0, 0)
+                    }
+                    replicatedStorage.Packages.Knit.Services.BallService.RE.Shoot:FireServer()
+                end
+
+                wait(0.1)
+            else
+                wait(0.5)
+            end
+        end
+    end
+end
 
 local ToggleFarm = AddToggle(Main, {
   Name = "Auto Goal ( need ball )",
