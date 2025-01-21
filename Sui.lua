@@ -132,4 +132,16 @@ local ToggleBall = AddToggle(Main, {
 
 local sectionS = AddSection(Main, {"SPEED AND INF STAIMNA"})
 
+AddButton(Main, {
+  Name = "GET SPEED ( DONT SPAM )",
+  Callback = function()
+    
+  end
+})
 
+AddButton(Main, {
+  Name = "INF STAMINA",
+  Callback = function()
+    
+  end
+})
