@@ -37,3 +37,9 @@ MakeNotifi({
 })
 
 local Main = MakeTab({Name = "INFO"})
+
+local Image = AddImageLabel(Main, {
+  Name = "TBD | HUB",
+  Image = "rbxassetid://71515603931996"
+})
+local Label = AddTextLabel(Main, "Simple And Easy use , Good hub | By TOUKA and ARBIX team and TBD owner")
