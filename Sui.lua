@@ -55,7 +55,6 @@ local Main = MakeTab({Name = "MAIN"})
 local sectionFarms = AddSection(Main, {"AUTO GOAL AND GET BALL"})
 
 local isAutoGoalEnabled = false
-local isAutoBallEnabled = false
 
 local function AutoGoal()
     local character = player.Character or player.CharacterAdded:Wait()
@@ -102,6 +101,7 @@ local ToggleFarm = AddToggle(Main, {
   end
 })
 
+local isAutoBallEnabled = false
 
 local function trackFootball()
     local character = player.Character or player.CharacterAdded:Wait()
