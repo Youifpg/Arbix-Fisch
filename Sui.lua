@@ -92,6 +92,9 @@ local ToggleFarm = AddToggle(Main, {
   Name = "Auto Goal ( need ball )",
   Default = false,
   Callback = function(Value)
-    
+    isAutoGoalEnabled = value
+        if isAutoGoalEnabled then
+            AutoGoal()
+        end
   end
 })
