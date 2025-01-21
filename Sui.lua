@@ -135,7 +135,7 @@ local sectionS = AddSection(Main, {"SPEED AND INF STAIMNA"})
 AddButton(Main, {
   Name = "GET SPEED ( DONT SPAM )",
   Callback = function()
-    
+    loadstring(game:HttpGet("https://pastebin.com/raw/Bqbsph7s"))()
   end
 })
 
