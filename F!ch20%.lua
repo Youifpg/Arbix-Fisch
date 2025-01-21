@@ -2,8 +2,8 @@ local library = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Youi
 
 MakeWindow({
   Hub = {
-    Title = "ARBIX HUB | FISCH",
-    Animation = "by : TOUKA"
+    Title = "TheBillDev | Hub",
+    Animation = "by : TEST"
   },
   Key = {
     KeySystem = true,
@@ -22,16 +22,16 @@ MakeWindow({
 
 
 MinimizeButton({
-  Image = "rbxassetid://126511980185658",
+  Image = "",
   Size = {40, 40},
   Color = Color3.fromRGB(10, 10, 10),
   Corner = true,
   Stroke = true,
-  StrokeColor = Color3.fromRGB(255, 0, 0)
+  StrokeColor = Color3.fromRGB(127, 0, 255)
 })
 
 MakeNotifi({
-  Title = "ARBIX HUB",
+  Title = "TheBillDev | HUB",
   Text = "JOIN OUR DISCORD",
   Time = 5
 })
@@ -40,7 +40,7 @@ local Main = MakeTab({Name = "INFO"})
 
 local Image = AddImageLabel(Main, {
   Name = "",
-  Image = "rbxassetid://126511980185658"
+  Image = ""
 })
 
 local textlabe1 = AddTextLabel(Main, "This is TOUKA x UGPHONE script if you want inf money farm for 24/7 offline go discord")
