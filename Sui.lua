@@ -290,8 +290,132 @@ AddButton(Main, {
 local Main = MakeTab({Name = "ITEMS"})
 
 local sectionShoot = AddSection(Main, {"GOAL EFFECT"})
+local GoalsTextBox = AddTextBox(Main, { 
+  Name = "Goal effect Name", 
+  Default = "", 
+  TextDisappear = false, 
+  PlaceholderText = "PUT NAME", 
+  ClearText = true, 
+  Callback = function(value) 
+
+
+      goal_name = value 
+  end 
+}) 
+
+
+AddButton(Main, { 
+  Name = "GET THE EFFECT", 
+  Description = "DONT SPAM!", 
+  Callback = function()
+      if goal_name and goal_name ~= "" then
+            local args = {
+                [1] = "GoalEffects",
+                [2] = goal_name
+            }
+            game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+        MakeNotifi({
+          Title = "SUCCES",
+          Text = "By touka",
+          Time = 5
+        })
+      
+      else 
+
+        MakeNotifi({
+          Title = "WRONG PLS BE CARFULLY",
+          Text = "By touka",
+          Time = 5
+        })
+      end 
+  end 
+})
+
+
 local sectionShoot = AddSection(Main, {"CARDS"})
+local CardsTextBox = AddTextBox(Main, { 
+  Name = "Card Name", 
+  Default = "", 
+  TextDisappear = false, 
+  PlaceholderText = "PUT NAME", 
+  ClearText = true, 
+  Callback = function(value) 
+
+
+      card_name = value 
+  end 
+}) 
+
+
+AddButton(Main, { 
+  Name = "GET THE CARD", 
+  Description = "DONT SPAM!", 
+  Callback = function()
+      if card_name and card_name ~= "" then
+            local args = {
+                [1] = "Cards",
+                [2] = card_name
+            }
+            game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+        MakeNotifi({
+          Title = "SUCCES",
+          Text = "By touka",
+          Time = 5
+        })
+      
+      else 
+
+        MakeNotifi({
+          Title = "WRONG PLS BE CARFULLY",
+          Text = "By touka",
+          Time = 5
+        })
+      end 
+  end 
+})
+
 local sectionShoot = AddSection(Main, {"COSMETICS"})
+local CardsTextBox = AddTextBox(Main, { 
+  Name = "Cosmetics Name", 
+  Default = "", 
+  TextDisappear = false, 
+  PlaceholderText = "PUT NAME", 
+  ClearText = true, 
+  Callback = function(value) 
+
+
+      cos_name = value 
+  end 
+}) 
+
+
+AddButton(Main, { 
+  Name = "GET THE Coametic", 
+  Description = "DONT SPAM!", 
+  Callback = function()
+      if cos_name and cos_name ~= "" then
+            local args = {
+                [1] = "Cosmetics",
+                [2] = cos_name
+            }
+            game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+        MakeNotifi({
+          Title = "SUCCES",
+          Text = "By touka",
+          Time = 5
+        })
+      
+      else 
+
+        MakeNotifi({
+          Title = "WRONG PLS BE CARFULLY",
+          Text = "By touka",
+          Time = 5
+        })
+      end 
+  end 
+})
+
 local sectionShoot = AddSection(Main, {"ONE TAP"})
 
 local Main = MakeTab({Name = "OTHERS"})
