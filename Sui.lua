@@ -287,3 +287,65 @@ AddButton(Main, {
       set_flow("Prodigy")
     end
   })
+
+local Main = MakeTab({Name = "OTHERS"})
+
+local sectionShoot = AddSection(Main, {"Shoot power"})
+
+local ShotTextBox = AddTextBox(Main, { 
+  Name = "Shoot power ( Max: 300 )", 
+  Default = "", 
+  TextDisappear = false, 
+  PlaceholderText = "PUT NUMBER", 
+  ClearText = true, 
+  Callback = function(value) 
+
+
+      shoot = value 
+  end 
+}) 
+
+
+AddButton(Main, { 
+  Name = "GET POWER", 
+  Description = "DONT SPAM!", 
+  Callback = function() 
+
+      if shoot and shoot ~= "" then 
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local StarterGui = game:GetService("StarterGui")
+
+local function fireShootRemote()
+    local args = {
+        [1] = shoot
+    }
+    
+   
+    ReplicatedStorage.Packages.Knit.Services.BallService.RE.Shoot:FireServer(unpack(args))
+end
+
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+local mobileGui = playerGui:WaitForChild("Mobile")
+
+local shootButton = mobileGui:WaitForChild("Ball"):WaitForChild("Shoot")
+
+shootButton.MouseButton1Click:Connect(fireShootRemote)
+        MakeNotifi({
+          Title = "SUCCES",
+          Text = "JOIN OUR TELEGRAM",
+          Time = 5
+        })
+      
+      else 
+
+        MakeNotifi({
+          Title = "WRONG PLS BE CARFULLY",
+          Text = "JOIN OUR TELEGRAM",
+          Time = 5
+        })
+      end 
+  end 
+})
