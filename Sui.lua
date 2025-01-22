@@ -166,3 +166,22 @@ AddButton(Main, {
 local Main = MakeTab({Name = "STYLE AND FLOW"})
 
 local sectionStyle = AddSection(Main, {"Styles ( Most of them works with skils"})
+
+local function set_style(desired_style)
+    if player:FindFirstChild("PlayerStats") then
+        local playerStats = player.PlayerStats
+        if playerStats:FindFirstChild("Style") then
+            playerStats.Style.Value = desired_style
+        end
+    end
+end
+
+local function set_flow(desired_flow)
+    if player:FindFirstChild("PlayerStats") then
+        local playerStats = player.PlayerStats
+        if playerStats:FindFirstChild("Flow") then
+            playerStats.Flow.Value = desired_flow
+        end
+    end
+end
+
