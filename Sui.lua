@@ -1,7 +1,3 @@
-local players = game:GetService("Players")
-local player = players.LocalPlayer
-local teams = game:GetService("Teams")
-local replicatedStorage = game:GetService("ReplicatedStorage")
 
 local library = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Youifpg/U-ARE-MY-SUNSHINE/refs/heads/main/Gui.lua")))()
 
@@ -53,6 +49,11 @@ local Label = AddTextLabel(Main, "Simple And Easy use , Good hub | By TOUKA and 
 local Main = MakeTab({Name = "MAIN"})
 
 local sectionFarms = AddSection(Main, {"AUTO GOAL AND GET BALL"})
+
+local players = game:GetService("Players")
+local player = players.LocalPlayer
+local teams = game:GetService("Teams")
+local replicatedStorage = game:GetService("ReplicatedStorage")
 
 local isAutoGoalEnabled = false
 
