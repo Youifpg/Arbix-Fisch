@@ -91,7 +91,7 @@ local function AutoGoal()
 end
 
 local Toggle1 = AddToggle(Main, {
-    Name = "Auto Goal",
+    Name = "Auto Goal ( need ball )",
     Default = false,
     Callback = function(value)
         isAutoGoalEnabled = value
@@ -159,6 +159,6 @@ AddButton(Main, {
 AddButton(Main, {
   Name = "GK V2",
   Callback = function()
-      loadstring(game:HttpGet("https://pastebin.com/raw/CfqfA9pw"))()
+      loadstring(game:HttpGet("https://pastebin.com/raw/4r9yzMEK"))()
   end
 })
