@@ -13,8 +13,8 @@ MakeWindow({
     KeySystem = true,
     Title = "TheBillDev | KEY",
     Description = "^ Best Hub ^",
-    KeyLink = "https://pastebin.com/raw/42434df8",
-    Keys = {"TESTKEY"},
+    KeyLink = "",
+    Keys = {"OWNERSKEY1", "ARBIX_TR651FGAQAK", "ARBIX_YHTQHUAJ12","ARBIX_HTAYHQYNOW", "ARBIX_TYAYYAWKK"},
     Notifi = {
       Notifications = true,
       CorrectKey = "Running the Script...",
