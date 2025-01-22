@@ -84,9 +84,8 @@ local function AutoGoal()
     end
 end
 
-local Toggle1 = Tab2:AddToggle({
+local Toggle1 = AddToggle(Main, {
     Name = "Auto Goal",
-    Description = "Automatically goes to the goal when you have the football.",
     Default = false,
     Callback = function(value)
         isAutoGoalEnabled = value
@@ -112,9 +111,8 @@ local function trackFootball()
     end
 end
 
-local Toggle2 = Tab2:AddToggle({
+local Toggle2 = AddToggle(Main, {
     Name = "Auto Teleport to Football",
-    Description = "Automatically teleports to the football until you get it.",
     Default = false,
     Callback = function(value)
         isAutoBallEnabled = value
