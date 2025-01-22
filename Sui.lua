@@ -7,7 +7,7 @@ local library = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Youi
 MakeWindow({
   Hub = {
     Title = "TheBillDev | Hub",
-    Animation = "by : TEST"
+    Animation = "by : TOUKA | ARBIX"
   },
   Key = {
     KeySystem = true,
@@ -46,8 +46,8 @@ local Image = AddImageLabel(Main, {
   Name = "TBD | HUB",
   Image = "rbxassetid://71515603931996"
 })
-local Label = AddTextLabel(Main, "Simple And Easy use , Good hub | By TOUKA and ARBIX team and TBD owner")
-
+local Paragraph1 = AddParagraph(Main, {"CREDIT", "THIS SCRIPT MADE BY TOUKA ARBIX HUB OWENR"})
+local Paragraph2 = AddParagraph(Main, {"INFO", "Simple And Easy use , Good hub and The best hub, I hope You enjoy in it"})
 -- Auto
 local Main = MakeTab({Name = "MAIN"})
 
