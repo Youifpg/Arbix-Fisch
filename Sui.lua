@@ -632,6 +632,7 @@ local Main = MakeTab({Name = "VISUALS"})
 local localPlayer = game:GetService("Players").LocalPlayer
 
 local sectionMoney = AddSection(Main, {"Money"})
+
 local MoneyTextBox = AddTextBox(Main, { 
   Name = "MONEY AMMOUNT", 
   Default = "", 
@@ -639,12 +640,9 @@ local MoneyTextBox = AddTextBox(Main, {
   PlaceholderText = "PUT NUMBER", 
   ClearText = true, 
   Callback = function(value) 
-
-
       money = value 
   end 
-}) 
-
+})
 
 AddButton(Main, { 
   Name = "GET MONEY", 
@@ -670,6 +668,7 @@ AddButton(Main, {
 })
   
 local sectionLevel = AddSection(Main, {"Levels"})
+
 local levelTextBox = AddTextBox(Main, { 
   Name = "Level number", 
   Default = "", 
@@ -688,26 +687,25 @@ AddButton(Main, {
   Name = "GET LEVEL", 
   Description = "DONT SPAM!", 
   Callback = function() 
-
       if lvl and lvl ~= "" then 
-        if localPlayer:FindFirstChild("ProfileStats") and localPlayer.ProfileStats:FindFirstChild("Level") then
-        localPlayer.ProfileStats.Level.Value = lvl
-        MakeNotifi({
-          Title = "SUCCES",
-          Text = "By touka arbix",
-          Time = 5
-        })
-      
-      else 
-
-        MakeNotifi({
-          Title = "WRONG PLS BE CARFULLY",
-          Text = "By touka arbix",
-          Time = 5
-        })
+          if localPlayer:FindFirstChild("ProfileStats") and localPlayer.ProfileStats:FindFirstChild("Level") then
+              localPlayer.ProfileStats.Level.Value = lvl
+              MakeNotifi({
+                  Title = "SUCCES",
+                  Text = "By touka arbix",
+                  Time = 5
+              })
+          else
+              MakeNotifi({
+                  Title = "WRONG PLS BE CARFULLY",
+                  Text = "By touka arbix",
+                  Time = 5
+              })
+          end 
       end 
   end 
 })
+
 local sectionStyS = AddSection(Main, {"Style Spins"})
     
 local StySTextBox = AddTextBox(Main, { 
@@ -728,29 +726,28 @@ AddButton(Main, {
   Name = "GET SPINS", 
   Description = "DONT SPAM!", 
   Callback = function() 
-
       if Sty and Sty ~= "" then 
-        if localPlayer:FindFirstChild("ProfileStats") and localPlayer.ProfileStats:FindFirstChild("Spins") then
-        localPlayer.ProfileStats.Spins.Value = Sty
-        MakeNotifi({
-          Title = "SUCCES",
-          Text = "By touka arbix",
-          Time = 5
-        })
-      
-      else 
-
-        MakeNotifi({
-          Title = "WRONG PLS BE CARFULLY",
-          Text = "By touka arbix",
-          Time = 5
-        })
+          if localPlayer:FindFirstChild("ProfileStats") and localPlayer.ProfileStats:FindFirstChild("Spins") then
+              localPlayer.ProfileStats.Spins.Value = Sty
+              MakeNotifi({
+                  Title = "SUCCES",
+                  Text = "By touka arbix",
+                  Time = 5
+              })
+          else
+              MakeNotifi({
+                  Title = "WRONG PLS BE CARFULLY",
+                  Text = "By touka arbix",
+                  Time = 5
+              })
+          end 
       end 
   end 
 })
-local sectionMoney = AddSection(Main, {"FLOWS SPINS"})
+
+local sectionFLOWS = AddSection(Main, {"FLOWS SPINS"})
     
-local FLspTextBox = AddTextBox(Main, { 
+local FLOWTextBox = AddTextBox(Main, { 
   Name = "Spins Ammount", 
   Default = "", 
   TextDisappear = false, 
@@ -768,23 +765,21 @@ AddButton(Main, {
   Name = "GET SPINS", 
   Description = "DONT SPAM!", 
   Callback = function() 
-
       if FLS and FLS ~= "" then 
-        if localPlayer:FindFirstChild("ProfileStats") and localPlayer.ProfileStats:FindFirstChild("FlowSpins") then
-        localPlayer.ProfileStats.FlowSpins.Value = FlS
-        MakeNotifi({
-          Title = "SUCCES",
-          Text = "By touka arbix",
-          Time = 5
-        })
-      
-      else 
-
-        MakeNotifi({
-          Title = "WRONG PLS BE CARFULLY",
-          Text = "By touka arbix",
-          Time = 5
-        })
+          if localPlayer:FindFirstChild("ProfileStats") and localPlayer.ProfileStats:FindFirstChild("FlowSpins") then
+              localPlayer.ProfileStats.FlowSpins.Value = FLS
+              MakeNotifi({
+                  Title = "SUCCES",
+                  Text = "By touka arbix",
+                  Time = 5
+              })
+          else
+              MakeNotifi({
+                  Title = "WRONG PLS BE CARFULLY",
+                  Text = "By touka arbix",
+                  Time = 5
+              })
+          end 
       end 
   end 
 })
