@@ -416,7 +416,8 @@ AddButton(Main, {
   end 
 })
 
-local sectionItems = AddSection(Main, {"ONE TAP"})
+
+local section176 = AddSection(Main, {"Goal effects one tap"})
 AddButton(Main, { 
     Name = "get Wonderland effect", -- Fixed the button name
     Callback = function()
@@ -468,6 +469,7 @@ game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService
         end          
     })
 --
+local section178 = AddSection(Main, {"Cards One tap"})
 AddButton(Main, { 
     Name = "get VIP card", -- Fixed the button name
     Callback = function()
@@ -516,6 +518,7 @@ AddButton(Main, {
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
         end          
     })
+local section179 = AddSection(Main, {"Cosmetics One tap"})
 AddButton(Main, { 
     Name = "Get admin SHADOW Aura ( the best )", -- Fixed the button name
     Callback = function()
