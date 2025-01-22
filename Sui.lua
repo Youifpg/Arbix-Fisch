@@ -51,7 +51,9 @@ local Label = AddTextLabel(Main, "Simple And Easy use , Good hub | By TOUKA and 
 -- Auto
 local Main = MakeTab({Name = "MAIN"})
 
-local sectionFarms = AddSection(Main, {"AUTO GOAL AND GET BALL"})local isAutoGoalEnabled = false
+local sectionFarms = AddSection(Main, {"AUTO GOAL AND GET BALL"})
+
+local isAutoGoalEnabled = false
 local isAutoBallEnabled = false
 
 local function AutoGoal()
