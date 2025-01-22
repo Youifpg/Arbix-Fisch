@@ -185,3 +185,88 @@ local function set_flow(desired_flow)
     end
 end
 
+local StyleTextBox = AddTextBox(Main, { 
+  Name = "Stye Name", 
+  Default = "", 
+  TextDisappear = false, 
+  PlaceholderText = "PUT NAME", 
+  ClearText = true, 
+  Callback = function(value) 
+
+
+      styleId = value 
+  end 
+}) 
+
+
+AddButton(Main, { 
+  Name = "GET THE STYLE", 
+  Description = "DONT SPAM!", 
+  Callback = function() 
+
+      if styleId and styleId ~= "" then 
+        set_style(styleId)
+        MakeNotifi({
+          Title = "SUCCES",
+          Text = "JOIN OUR TELEGRAM",
+          Time = 5
+        })
+      
+      else 
+
+        MakeNotifi({
+          Title = "WRONG PLS BE CARFULLY",
+          Text = "JOIN OUR TELEGRAM",
+          Time = 5
+        })
+      end 
+  end 
+})
+local sectionFlow = AddSection(Main, {"Flows"})
+
+local FlowTextBox = AddTextBox(Main, { 
+  Name = "Flow Name", 
+  Default = "", 
+  TextDisappear = false, 
+  PlaceholderText = "PUT NAME", 
+  ClearText = true, 
+  Callback = function(value) 
+
+
+      flow_name = value 
+  end 
+}) 
+
+
+AddButton(Main, { 
+  Name = "GET THE FLOW", 
+  Description = "DONT SPAM!", 
+  Callback = function() 
+
+      if flow_name and flow_name ~= "" then 
+        set_flow(flow_name)
+        MakeNotifi({
+          Title = "SUCCES",
+          Text = "JOIN OUR TELEGRAM",
+          Time = 5
+        })
+      
+      else 
+
+        MakeNotifi({
+          Title = "WRONG PLS BE CARFULLY",
+          Text = "JOIN OUR TELEGRAM",
+          Time = 5
+        })
+      end 
+  end 
+})
+
+local sectionFlow2 = AddSection(Main, {"Flows Function"})
+AddButton(Main, { 
+  Name = "ALWAYS FLOW ON (FE)", 
+  Description = "DONT SPAM!", 
+  Callback = function()
+
+    end
+})
