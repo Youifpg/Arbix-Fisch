@@ -13,7 +13,7 @@ MakeWindow({
     KeySystem = true,
     Title = "TheBillDev | KEY",
     Description = "^ Best Hub ^",
-    KeyLink = "",
+    KeyLink = {"https://link-center.net/1282637/thebilldev-hub-key", "https://direct-link.net/1282637/thebilldev-script-hub"},
     Keys = {"OWNERSKEY1", "ARBIX_TR651FGAQAK", "ARBIX_YHTQHUAJ12","ARBIX_HTAYHQYNOW", "ARBIX_TYAYYAWKK"},
     Notifi = {
       Notifications = true,
