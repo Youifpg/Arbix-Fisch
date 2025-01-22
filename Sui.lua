@@ -629,8 +629,10 @@ shootButton.MouseButton1Click:Connect(fireShootRemote)
 })
 local Main = MakeTab({Name = "VISUALS"})
 
+local localPlayer = game:GetService("Players").LocalPlayer
+
 local sectionMoney = AddSection(Main, {"Money"})
-local ShotTextBox = AddTextBox(Main, { 
+local MoneyTextBox = AddTextBox(Main, { 
   Name = "MONEY AMMOUNT", 
   Default = "", 
   TextDisappear = false, 
@@ -670,7 +672,7 @@ AddButton(Main, {
 })
   
 local sectionLevel = AddSection(Main, {"Levels"})
-local ShotTextBox = AddTextBox(Main, { 
+local levelTextBox = AddTextBox(Main, { 
   Name = "Level number", 
   Default = "", 
   TextDisappear = false, 
@@ -710,7 +712,7 @@ AddButton(Main, {
 })
 local sectionStyS = AddSection(Main, {"Style Spins"})
     
-local ShotTextBox = AddTextBox(Main, { 
+local StySTextBox = AddTextBox(Main, { 
   Name = "Spins AMMOUNT", 
   Default = "", 
   TextDisappear = false, 
@@ -750,7 +752,7 @@ AddButton(Main, {
 })
 local sectionMoney = AddSection(Main, {"FLOWS SPINS"})
     
-local ShotTextBox = AddTextBox(Main, { 
+local FLspTextBox = AddTextBox(Main, { 
   Name = "Spins Ammount", 
   Default = "", 
   TextDisappear = false, 
