@@ -659,9 +659,7 @@ AddButton(Main, {
           Text = "By touka arbix",
           Time = 5
         })
-      
-      else 
-
+      else
         MakeNotifi({
           Title = "WRONG PLS BE CARFULLY",
           Text = "By touka arbix",
