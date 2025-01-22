@@ -289,7 +289,7 @@ AddButton(Main, {
   })
 local Main = MakeTab({Name = "ITEMS"})
 
-local sectionShoot = AddSection(Main, {"GOAL EFFECT"})
+local section100 = AddSection(Main, {"GOAL EFFECT"})
 local GoalsTextBox = AddTextBox(Main, { 
   Name = "Goal effect Name", 
   Default = "", 
@@ -332,7 +332,7 @@ AddButton(Main, {
 })
 
 
-local sectionShoot = AddSection(Main, {"CARDS"})
+local section15 = AddSection(Main, {"CARDS"})
 local CardsTextBox = AddTextBox(Main, { 
   Name = "Card Name", 
   Default = "", 
@@ -374,7 +374,7 @@ AddButton(Main, {
   end 
 })
 
-local sectionShoot = AddSection(Main, {"COSMETICS"})
+local section12 = AddSection(Main, {"COSMETICS"})
 local CardsTextBox = AddTextBox(Main, { 
   Name = "Cosmetics Name", 
   Default = "", 
@@ -416,7 +416,7 @@ AddButton(Main, {
   end 
 })
 
-local sectionShoot = AddSection(Main, {"ONE TAP"})
+local sectionItems = AddSection(Main, {"ONE TAP"})
 AddButton(Main, { 
     Name = "get Wonderland effect", -- Fixed the button name
     Callback = function()
@@ -511,6 +511,53 @@ AddButton(Main, {
     local args = {
     [1] = "Cards",
     [2] = "YingYang"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+        end          
+    })
+AddButton(Main, { 
+    Name = "Get admin SHADOW Aura ( the best )", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "Cosmetics",
+    [2] = "SHADOW"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+        end          
+    })
+
+AddButton(Main, { 
+    Name = "get Snowman Cape", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "Cosmetics",
+    [2] = "Snowman Cape"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+        end          
+    })
+
+AddButton(Main, { 
+    Name = "get Peppermint Cape ( best normal )", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "Cosmetics",
+    [2] = "Peppermint Cape"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+        end          
+    })
+
+AddButton(Main, { 
+    Name = "get Christmas Aura", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "Cosmetics",
+    [2] = "Christmas Aura"
 }
 
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
