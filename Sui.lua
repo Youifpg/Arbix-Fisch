@@ -467,7 +467,55 @@ AddButton(Main, {
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
         end          
     })
+--
+AddButton(Main, { 
+    Name = "get VIP card", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "Cards",
+    [2] = "VIP"
+}
 
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+        end          
+    })
+AddButton(Main, { 
+    Name = "get Legend card", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "Cards",
+    [2] = "Legend"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+        end          
+    })
+
+
+AddButton(Main, { 
+    Name = "get Crystal card ( best )", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "Cards",
+    [2] = "Crystal"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+        end          
+    })
+
+
+AddButton(Main, { 
+    Name = "get Admin card", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "Cards",
+    [2] = "YingYang"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+        end          
+    })
 local Main = MakeTab({Name = "OTHERS"})
 
 local sectionShoot = AddSection(Main, {"Shoot power"})
