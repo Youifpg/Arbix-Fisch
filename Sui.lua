@@ -47,14 +47,8 @@ local Label = AddTextLabel(Main, "Simple And Easy use , Good hub | By TOUKA and 
 -- Auto
 local Main = MakeTab({Name = "MAIN"})
 
-local sectionFarms = AddSection(Main, {"AUTO GOAL AND GET BALL"})
-
-local players = game:GetService("Players")
-local player = players.LocalPlayer
-local teams = game:GetService("Teams")
-local replicatedStorage = game:GetService("ReplicatedStorage")
-
-local isAutoGoalEnabled = false
+local sectionFarms = AddSection(Main, {"AUTO GOAL AND GET BALL"})local isAutoGoalEnabled = false
+local isAutoBallEnabled = false
 
 local function AutoGoal()
     local character = player.Character or player.CharacterAdded:Wait()
@@ -63,7 +57,7 @@ local function AutoGoal()
     if football then
         while isAutoGoalEnabled do
             if character:FindFirstChild("Football") then
-               
+                -- Teleport to the goal based on the player's team
                 local goalPosition
                 if player.Team.Name == "Away" then
                     goalPosition = workspace.Goals.Away.CFrame
@@ -72,9 +66,9 @@ local function AutoGoal()
                 end
 
                 if goalPosition then
-                    character:SetPrimaryPartCFrame(goalPosition)
-                    wait(0.1)
-                    
+                    character:SetPrimaryPartCFrame(goalPosition) -- Teleport to the goal
+                    wait(0.1) -- Short wait to ensure teleportation is processed
+                    -- Immediately shoot the ball after teleporting
                     local args = {
                         [1] = 30,
                         [4] = Vector3.new(0, 0, 0)
@@ -82,26 +76,25 @@ local function AutoGoal()
                     replicatedStorage.Packages.Knit.Services.BallService.RE.Shoot:FireServer()
                 end
 
-                wait(0.1)
+                wait(1) -- Wait before the next action to avoid spamming
             else
-                wait(0.5)
+                wait(0.5) -- Shorter wait if the player doesn't have the football
             end
         end
     end
 end
 
-local ToggleFarm = AddToggle(Main, {
-  Name = "Auto Goal ( need ball )",
-  Default = false,
-  Callback = function(Value)
-    isAutoGoalEnabled = value
+local Toggle1 = Tab2:AddToggle({
+    Name = "Auto Goal",
+    Description = "Automatically goes to the goal when you have the football.",
+    Default = false,
+    Callback = function(value)
+        isAutoGoalEnabled = value
         if isAutoGoalEnabled then
-            AutoGoal()
+            AutoGoal() -- Start the AutoGoal function
         end
-  end
+    end
 })
-
-local isAutoBallEnabled = false
 
 local function trackFootball()
     local character = player.Character or player.CharacterAdded:Wait()
@@ -119,15 +112,16 @@ local function trackFootball()
     end
 end
 
-local ToggleBall = AddToggle(Main, {
-  Name = "Auto Get ball",
-  Default = false,
-  Callback = function(Value)
-    isAutoBallEnabled = value
+local Toggle2 = Tab2:AddToggle({
+    Name = "Auto Teleport to Football",
+    Description = "Automatically teleports to the football until you get it.",
+    Default = false,
+    Callback = function(value)
+        isAutoBallEnabled = value
         if isAutoBallEnabled then
-            trackFootball()
+            trackFootball() -- Start tracking the football
         end
-  end
+    end
 })
 
 local sectionS = AddSection(Main, {"SPEED AND INF STAIMNA"})
