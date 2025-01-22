@@ -113,7 +113,7 @@ local function trackFootball()
         else
             print("Football is not in workspace anymore")
         end
-        wait(0.1) -- Wait for 0.1 seconds before checking again
+        wait() -- Wait for 0.1 seconds before checking again
     end
 end
 
