@@ -263,10 +263,19 @@ AddButton(Main, {
 })
 
 local sectionFlow2 = AddSection(Main, {"Flows Function"})
+
+local localPlayer = game:GetService("Players").LocalPlayer
+
 AddButton(Main, { 
   Name = "ALWAYS FLOW ON (FE)", 
   Description = "DONT SPAM!", 
   Callback = function()
-
+    if localPlayer:FindFirstChild("PlayerStats") and localPlayer.PlayerStats:FindFirstChild("InFlow") then
+        localPlayer.PlayerStats.InFlow.Value = true
+        local args = {
+        [1] = "true"
+    }
+    game:GetService("ReplicatedStorage").Packages.Knit.Services.FlowService.RE.AuraEquip:FireServer(unpack(args))
+       end
     end
 })
