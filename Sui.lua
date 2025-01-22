@@ -46,8 +46,10 @@ local Image = AddImageLabel(Main, {
   Name = "TBD | HUB",
   Image = "rbxassetid://71515603931996"
 })
-local Paragraph1 = AddParagraph(Main, {"CREDIT", "THIS SCRIPT MADE BY TOUKA ARBIX HUB OWENR"})
-local Paragraph2 = AddParagraph(Main, {"INFO", "Simple And Easy use , Good hub and The best hub, I hope You enjoy in it"})
+local Paragraph1 = AddParagraph(Main, {"THIS SCRIPT MADE BY TOUKA ARBIX HUB OWENR", "CREDIT"})
+local Paragraph2 = AddParagraph(Main, {"Simple And Easy use , Good hub and The best hub, I hope You enjoy in it", "INFO"})
+local Paragraph2 = AddParagraph(Main, {"OWNER DISCORD : https://discord.gg/GaE9u4xNVC", "DISCORD"})
+local Paragraph2 = AddParagraph(Main, {"ARBIX HUB ( SCRIPT MADER ) DISCORD: https://discord.gg/VRHYbyj8Dy ", "DISCORD SERVER"})
 -- Auto
 local Main = MakeTab({Name = "MAIN"})
 
