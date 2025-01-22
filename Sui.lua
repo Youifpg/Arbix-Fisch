@@ -208,7 +208,7 @@ AddButton(Main, {
         set_style(styleId)
         MakeNotifi({
           Title = "SUCCES",
-          Text = "JOIN OUR TELEGRAM",
+          Text = " by touka",
           Time = 5
         })
       
@@ -216,7 +216,7 @@ AddButton(Main, {
 
         MakeNotifi({
           Title = "WRONG PLS BE CARFULLY",
-          Text = "JOIN OUR TELEGRAM",
+          Text = "By touka",
           Time = 5
         })
       end 
@@ -247,7 +247,7 @@ AddButton(Main, {
         set_flow(flow_name)
         MakeNotifi({
           Title = "SUCCES",
-          Text = "JOIN OUR TELEGRAM",
+          Text = "By touka",
           Time = 5
         })
       
@@ -255,7 +255,7 @@ AddButton(Main, {
 
         MakeNotifi({
           Title = "WRONG PLS BE CARFULLY",
-          Text = "JOIN OUR TELEGRAM",
+          Text = "By touka",
           Time = 5
         })
       end 
@@ -287,6 +287,12 @@ AddButton(Main, {
       set_flow("Prodigy")
     end
   })
+local Main = MakeTab({Name = "ITEMS"})
+
+local sectionShoot = AddSection(Main, {"GOAL EFFECT"})
+local sectionShoot = AddSection(Main, {"CARDS"})
+local sectionShoot = AddSection(Main, {"COSMETICS"})
+local sectionShoot = AddSection(Main, {"ONE TAP"})
 
 local Main = MakeTab({Name = "OTHERS"})
 
@@ -335,7 +341,7 @@ local shootButton = mobileGui:WaitForChild("Ball"):WaitForChild("Shoot")
 shootButton.MouseButton1Click:Connect(fireShootRemote)
         MakeNotifi({
           Title = "SUCCES",
-          Text = "JOIN OUR TELEGRAM",
+          Text = "By touka arbix",
           Time = 5
         })
       
@@ -343,7 +349,7 @@ shootButton.MouseButton1Click:Connect(fireShootRemote)
 
         MakeNotifi({
           Title = "WRONG PLS BE CARFULLY",
-          Text = "JOIN OUR TELEGRAM",
+          Text = "By touka arbix",
           Time = 5
         })
       end 
