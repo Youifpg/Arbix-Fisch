@@ -147,3 +147,11 @@ AddButton(Main, {
 game:GetService("ReplicatedStorage").Packages.Knit.Services.StaminaService.RE.DecreaseStamina:FireServer(unpack(args))
   end
 })
+local sectionGK = AddSection(Main, {"GK"})
+
+AddButton(Main, {
+  Name = "GK V1 ( TELEPORT )",
+  Callback = function()
+    
+  end
+})
