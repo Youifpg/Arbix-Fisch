@@ -417,6 +417,56 @@ AddButton(Main, {
 })
 
 local sectionShoot = AddSection(Main, {"ONE TAP"})
+AddButton(Main, { 
+    Name = "get Wonderland effect", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "GoalEffects",
+    [2] = "Wonderland"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+        end          
+    })
+
+
+AddButton(Main, { 
+    Name = "get Conquer effect", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "GoalEffects",
+    [2] = "Conquer"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+        end          
+    })
+
+
+AddButton(Main, { 
+    Name = "get Time Stop effect", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "GoalEffects",
+    [2] = "Time Stop"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))       
+        end          
+    })
+
+
+AddButton(Main, { 
+    Name = "get Presents Effect", -- Fixed the button name
+    Callback = function()
+    local args = {
+    [1] = "GoalEffects",
+    [2] = "Presents"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+        end          
+    })
 
 local Main = MakeTab({Name = "OTHERS"})
 
