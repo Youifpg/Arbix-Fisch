@@ -150,8 +150,15 @@ game:GetService("ReplicatedStorage").Packages.Knit.Services.StaminaService.RE.De
 local sectionGK = AddSection(Main, {"GK"})
 
 AddButton(Main, {
-  Name = "GK V1 ( TELEPORT )",
+  Name = "GK V1 ( MORE LEGIT )",
   Callback = function()
-    
+      loadstring(game:HttpGet("https://pastebin.com/raw/CfqfA9pw"))()
+  end
+})
+
+AddButton(Main, {
+  Name = "GK V2",
+  Callback = function()
+      loadstring(game:HttpGet("https://pastebin.com/raw/CfqfA9pw"))()
   end
 })
