@@ -627,3 +627,164 @@ shootButton.MouseButton1Click:Connect(fireShootRemote)
       end 
   end 
 })
+local Main = MakeTab({Name = "VISUALS"})
+
+local sectionMoney = AddSection(Main, {"Money"})
+local ShotTextBox = AddTextBox(Main, { 
+  Name = "MONEY AMMOUNT", 
+  Default = "", 
+  TextDisappear = false, 
+  PlaceholderText = "PUT NUMBER", 
+  ClearText = true, 
+  Callback = function(value) 
+
+
+      money = value 
+  end 
+}) 
+
+
+AddButton(Main, { 
+  Name = "GET MONEY", 
+  Description = "DONT SPAM!", 
+  Callback = function() 
+
+      if money and money ~= "" then 
+        if localPlayer:FindFirstChild("ProfileStats") and localPlayer.ProfileStats:FindFirstChild("Money") then
+        localPlayer.ProfileStats.Money.Value = money
+        MakeNotifi({
+          Title = "SUCCES",
+          Text = "By touka arbix",
+          Time = 5
+        })
+      
+      else 
+
+        MakeNotifi({
+          Title = "WRONG PLS BE CARFULLY",
+          Text = "By touka arbix",
+          Time = 5
+        })
+      end 
+  end 
+})
+  
+local sectionLevel = AddSection(Main, {"Levels"})
+local ShotTextBox = AddTextBox(Main, { 
+  Name = "Level number", 
+  Default = "", 
+  TextDisappear = false, 
+  PlaceholderText = "PUT NUMBER", 
+  ClearText = true, 
+  Callback = function(value) 
+
+
+      lvl = value 
+  end 
+}) 
+
+
+AddButton(Main, { 
+  Name = "GET LEVEL", 
+  Description = "DONT SPAM!", 
+  Callback = function() 
+
+      if lvl and lvl ~= "" then 
+        if localPlayer:FindFirstChild("ProfileStats") and localPlayer.ProfileStats:FindFirstChild("Level") then
+        localPlayer.ProfileStats.Level.Value = lvl
+        MakeNotifi({
+          Title = "SUCCES",
+          Text = "By touka arbix",
+          Time = 5
+        })
+      
+      else 
+
+        MakeNotifi({
+          Title = "WRONG PLS BE CARFULLY",
+          Text = "By touka arbix",
+          Time = 5
+        })
+      end 
+  end 
+})
+local sectionStyS = AddSection(Main, {"Style Spins"})
+    
+local ShotTextBox = AddTextBox(Main, { 
+  Name = "Spins AMMOUNT", 
+  Default = "", 
+  TextDisappear = false, 
+  PlaceholderText = "PUT NUMBER", 
+  ClearText = true, 
+  Callback = function(value) 
+
+
+      Sty = value 
+  end 
+}) 
+
+
+AddButton(Main, { 
+  Name = "GET SPINS", 
+  Description = "DONT SPAM!", 
+  Callback = function() 
+
+      if Sty and Sty ~= "" then 
+        if localPlayer:FindFirstChild("ProfileStats") and localPlayer.ProfileStats:FindFirstChild("Spins") then
+        localPlayer.ProfileStats.Spins.Value = Sty
+        MakeNotifi({
+          Title = "SUCCES",
+          Text = "By touka arbix",
+          Time = 5
+        })
+      
+      else 
+
+        MakeNotifi({
+          Title = "WRONG PLS BE CARFULLY",
+          Text = "By touka arbix",
+          Time = 5
+        })
+      end 
+  end 
+})
+local sectionMoney = AddSection(Main, {"FLOWS SPINS"})
+    
+local ShotTextBox = AddTextBox(Main, { 
+  Name = "Spins Ammount", 
+  Default = "", 
+  TextDisappear = false, 
+  PlaceholderText = "PUT NUMBER", 
+  ClearText = true, 
+  Callback = function(value) 
+
+
+      FLS = value 
+  end 
+}) 
+
+
+AddButton(Main, { 
+  Name = "GET SPINS", 
+  Description = "DONT SPAM!", 
+  Callback = function() 
+
+      if FLS and FLS ~= "" then 
+        if localPlayer:FindFirstChild("ProfileStats") and localPlayer.ProfileStats:FindFirstChild("FlowSpins") then
+        localPlayer.ProfileStats.FlowSpins.Value = FlS
+        MakeNotifi({
+          Title = "SUCCES",
+          Text = "By touka arbix",
+          Time = 5
+        })
+      
+      else 
+
+        MakeNotifi({
+          Title = "WRONG PLS BE CARFULLY",
+          Text = "By touka arbix",
+          Time = 5
+        })
+      end 
+  end 
+})
