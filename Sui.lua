@@ -1,4 +1,3 @@
-
 local library = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Youifpg/U-ARE-MY-SUNSHINE/refs/heads/main/Gui.lua")))()
 
 MakeWindow({
