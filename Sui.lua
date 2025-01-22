@@ -1,3 +1,7 @@
+local players = game:GetService("Players") -- Corrected the order of declaration
+local player = players.LocalPlayer -- Moved this line after players is defined
+local teams = game:GetService("Teams")
+local replicatedStorage = game:GetService("ReplicatedStorage")
 local library = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Youifpg/U-ARE-MY-SUNSHINE/refs/heads/main/Gui.lua")))()
 
 MakeWindow({
