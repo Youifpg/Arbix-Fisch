@@ -279,3 +279,11 @@ AddButton(Main, {
        end
     end
 })
+
+AddButton(Main, { 
+  Name = "Prodigy", 
+  Description = "INF CURVE SHOT AND SPEED LEGIT ( PRESS ALWAYS FLOW ON)", 
+  Callback = function()
+      set_flow("Prodigy")
+    end
+  })
