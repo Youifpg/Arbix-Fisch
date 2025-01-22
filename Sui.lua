@@ -650,21 +650,21 @@ AddButton(Main, {
   Name = "GET MONEY", 
   Description = "DONT SPAM!", 
   Callback = function() 
-
       if money and money ~= "" then 
-        if localPlayer:FindFirstChild("ProfileStats") and localPlayer.ProfileStats:FindFirstChild("Money") then
-        localPlayer.ProfileStats.Money.Value = money
-        MakeNotifi({
-          Title = "SUCCES",
-          Text = "By touka arbix",
-          Time = 5
-        })
-      else
-        MakeNotifi({
-          Title = "WRONG PLS BE CARFULLY",
-          Text = "By touka arbix",
-          Time = 5
-        })
+          if localPlayer:FindFirstChild("ProfileStats") and localPlayer.ProfileStats:FindFirstChild("Money") then
+              localPlayer.ProfileStats.Money.Value = money
+              MakeNotifi({
+                  Title = "SUCCES",
+                  Text = "By touka arbix",
+                  Time = 5
+              })
+          else
+              MakeNotifi({
+                  Title = "WRONG PLS BE CARFULLY",
+                  Text = "By touka arbix",
+                  Time = 5
+              })
+          end 
       end 
   end 
 })
